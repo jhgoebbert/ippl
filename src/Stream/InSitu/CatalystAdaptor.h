@@ -32,7 +32,6 @@ public:
         q_host = particleContainer->q.getHostMirror();
         ID_host = particleContainer->ID.getHostMirror();
 
-        // deep_copy로 데이터 복사
         Kokkos::deep_copy(R_host, particleContainer->R.getView());
         Kokkos::deep_copy(P_host, particleContainer->P.getView());
         Kokkos::deep_copy(q_host, particleContainer->q.getView());
